@@ -7,7 +7,8 @@ var app = new Vue({
     methods:{
       addBlock(){
         console.log(this)
-        this.$data.blocks.push({backgroundcolor:`background:${this.$data.color}`})
+        this.$data.blocks.push({bgcolor:this.$data.color})
+        console.log(this.$data.blocks)
       }
     }
 })
