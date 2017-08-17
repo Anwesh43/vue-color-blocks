@@ -1,0 +1,20 @@
+<style>
+    .div-block {
+        width:100px;
+        height:100px;
+        border-radius:20%;
+        padding:1%;
+    }
+</style>
+
+<div id="app">
+    {{color}}<input type="text" v-model="color">
+    <br>
+    <button v-if="color.trim() != ''" v-on:click="addBlock">Submit</button>
+    <div class="div-block" v-bind:style="block.backgroundcolor" v-for="block in blocks">
+    </div>
+</div>
+<script src="https://unpkg.com/vue">
+</script>
+<script src="index.js">
+</script>
